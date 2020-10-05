@@ -27,7 +27,7 @@ ENV PATH=$PATH:/usr/share/v2ray
 
 RUN wget https://github.com/v2rayA/v2rayA/releases/download/v1.0.1/v2raya_linux_arm64_v1.0.1
 RUN chmod +x /v2raya_linux_arm64_v1.0.1
-RUN chmod +x /usr/bin/v2raya
+RUN mv /v2raya_linux_arm64_v1.0.1 /usr/bin/v2raya
 
 VOLUME /etc/v2raya
 
