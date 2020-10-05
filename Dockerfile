@@ -31,6 +31,7 @@ RUN mv /v2raya_linux_arm64_v1.0.1 /usr/bin/v2raya
 
 RUN sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf
 RUN sysctl -p
+RUN echo -e "nameserver 114.114.114.114" > /etc/resolv.conf
 
 VOLUME /etc/v2raya
 
