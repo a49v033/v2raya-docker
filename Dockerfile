@@ -30,10 +30,6 @@ RUN wget https://github.com/v2rayA/v2rayA/releases/download/v1.0.1/v2raya_linux_
 RUN chmod +x /v2raya_linux_arm64_v1.0.1
 RUN mv /v2raya_linux_arm64_v1.0.1 /usr/bin/v2raya
 
-RUN sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g" /etc/sysctl.conf
-RUN sysctl -p
-
-
 VOLUME /etc/v2raya
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
