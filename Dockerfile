@@ -2,7 +2,7 @@ FROM arm64v8/alpine
 RUN apk update
 RUN apk upgrade
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget iptables ip6tables bash-completion bash unzip
-
+ENV VER=v1.0.1
 RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
@@ -26,9 +26,9 @@ RUN rm -rf /tmp/v2ray
 
 ENV PATH=$PATH:/usr/share/v2ray
 
-RUN wget https://github.com/v2rayA/v2rayA/releases/download/v1.0.1/v2raya_linux_arm64_v1.0.1
-RUN chmod +x /v2raya_linux_arm64_v1.0.1
-RUN mv /v2raya_linux_arm64_v1.0.1 /usr/bin/v2raya
+RUN wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_linux_arm64_$VER
+RUN chmod +x /v2raya_linux_arm64_$VER
+RUN mv /v2raya_linux_arm64_$VER /usr/bin/v2raya
 
 VOLUME /etc/v2raya
 ADD entrypoint.sh /entrypoint.sh
