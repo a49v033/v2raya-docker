@@ -1,7 +1,7 @@
 FROM arm64v8/alpine
 RUN apk update
 RUN apk upgrade
-RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget iptables ip6tables bash-completion bash unzip
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget iptables bash-completion bash unzip
 ENV VER=v1.0.1
 RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
