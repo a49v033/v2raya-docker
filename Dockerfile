@@ -30,6 +30,12 @@ RUN wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_linux_ar
 RUN chmod +x /v2raya_linux_arm64_$VER
 RUN mv /v2raya_linux_arm64_$VER /usr/bin/v2raya
 
+RUN wget https://static.adguard.com/adguardhome/beta/AdGuardHome_linux_arm64.tar.gz
+RUN tar  -zxvf AdGuardHome_linux_arm64.tar.gz
+RUN rm -r AdGuardHome_linux_arm64.tar.gz
+RUN mv /AdGuardHome/AdGuardHome /usr/bin/AdGuardHome
+RUN chmod +x /usr/bin/AdGuardHome
+
 VOLUME /etc/v2raya
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
