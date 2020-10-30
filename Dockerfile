@@ -10,7 +10,10 @@ RUN apk del tzdata
 
 RUN mkdir /etc/v2raya
 RUN mkdir /etc/v2raya-web
+RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/favicon.ico
 RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/index.html
+RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/CNAME
+RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/robots.txt
 RUN mkdir /usr/share/v2ray
 
 RUN mkdir /tmp/v2ray
