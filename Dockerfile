@@ -15,6 +15,8 @@ RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/mast
 RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/CNAME
 RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/robots.txt
 RUN mkdir /usr/share/v2ray
+RUN mkdir -p /usr/local/share/v2ray
+RUN mkdir -p /usr/local/share/v2ray && touch /usr/local/share/v2ray/.copykeep
 
 RUN mkdir /tmp/v2ray
 RUN curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-arm64-v8a.zip
@@ -23,9 +25,9 @@ RUN chmod +x /tmp/v2ray/v2ray
 RUN chmod +x /tmp/v2ray/v2ctl
 RUN mv /tmp/v2ray/v2ray /usr/share/v2ray/v2ray
 RUN mv /tmp/v2ray/v2ctl /usr/share/v2ray/v2ctl
-RUN wget -O /usr/share/v2ray/LoyalsoldierSite.dat https://raw.githubusercontent.com/mzz2017/dist-v2ray-rules-dat/master/geosite.dat
-RUN mv /tmp/v2ray/geoip.dat /usr/share/v2ray/geoip.dat
-RUN mv /tmp/v2ray/geosite.dat /usr/share/v2ray/geosite.dat
+RUN wget -O /usr/local/share/LoyalsoldierSite.dat https://raw.githubusercontent.com/mzz2017/dist-v2ray-rules-dat/master/geosite.dat
+RUN mv /tmp/v2ray/geoip.dat /usr/local/share/geoip.dat
+RUN mv /tmp/v2ray/geosite.dat /usr/local/share/geosite.dat
 RUN rm -rf /tmp/v2ray
 
 ENV PATH=$PATH:/usr/share/v2ray
