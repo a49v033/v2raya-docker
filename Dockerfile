@@ -2,7 +2,7 @@ FROM alpine
 RUN apk update
 RUN apk upgrade
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget iptables bash-completion bash unzip
-ENV VER=v1.1.3
+ENV VER=v1.2.1
 RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
