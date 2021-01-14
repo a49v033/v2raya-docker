@@ -37,7 +37,7 @@ RUN mv /sdns-1.1.7_linux_arm64/sdns /usr/bin/sdns
 RUN rm -r sdns-1.1.7_linux_arm64.tar.gz
 
 
-RUN https://github.com/pymumu/smartdns/releases/download/Release33/smartdns-aarch64
+RUN wget https://github.com/pymumu/smartdns/releases/download/Release33/smartdns-aarch64
 RUN chmod +x /smartdns-aarch64
 RUN mv /smartdns-aarch64 /usr/bin/smartdns
 
