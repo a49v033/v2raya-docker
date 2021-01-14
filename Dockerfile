@@ -30,7 +30,7 @@ RUN mv /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat
 RUN rm -rf /tmp/v2ray
 
 RUN wget https://github.com/semihalev/sdns/releases/download/v1.1.7/sdns-1.1.7_linux_arm64.tar.gz
-RUN tar -zxvf /root/sdns-1.1.7_linux_arm64.tar.gz
+RUN tar -zxvf /sdns-1.1.7_linux_arm64.tar.gz
 RUN mv /sdns-1.1.7_linux_arm64/sdns /usr/bin/sdns
 RUN rm -r sdns-1.1.7_linux_arm64.tar.gz
 ENV PATH=$PATH:/usr/share/v2ray
