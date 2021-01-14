@@ -29,6 +29,10 @@ RUN mv /tmp/v2ray/geoip.dat /usr/local/share/v2ray/geoip.dat
 RUN mv /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat
 RUN rm -rf /tmp/v2ray
 
+RUN wget https://github.com/semihalev/sdns/releases/download/v1.1.7/sdns-1.1.7_linux_arm64.tar.gz
+RUN tar -zxvf /root/sdns-1.1.7_linux_arm64.tar.gz
+RUN mv /sdns-1.1.7_linux_arm64/sdns /usr/bin/sdns
+RUN rm -r sdns-1.1.7_linux_arm64.tar.gz
 ENV PATH=$PATH:/usr/share/v2ray
 
 RUN wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_linux_arm64_$VER
@@ -39,5 +43,5 @@ VOLUME /etc/v2raya
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
-EXPOSE 53 2017 20170 20171 20172
+EXPOSE 53 2017 8080 20170 20171 20172
 #ENTRYPOINT ["v2raya","--mode=universal", "--webdir=/etc/v2raya-web"]
