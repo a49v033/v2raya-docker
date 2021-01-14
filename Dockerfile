@@ -37,6 +37,11 @@ RUN tar -zxvf /sdns-$DNSVER_linux_arm64.tar.gz
 RUN mv /sdns-$DNSVER_linux_arm64/sdns /usr/bin/sdns
 RUN rm -r sdns-$DNSVER_linux_arm64.tar.gz
 
+
+RUN https://github.com/pymumu/smartdns/releases/download/Release33/smartdns-aarch64
+RUN chmod +x /smartdns-aarch64
+RUN mv /smartdns-aarch64 /usr/bin/smartdns
+
 RUN wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_linux_arm64_$VER
 RUN chmod +x /v2raya_linux_arm64_$VER
 RUN mv /v2raya_linux_arm64_$VER /usr/bin/v2raya
