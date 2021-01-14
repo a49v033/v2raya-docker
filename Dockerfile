@@ -3,7 +3,6 @@ RUN apk update
 RUN apk upgrade
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget iptables bash-completion bash unzip
 ENV VER=v1.2.1
-ENV DNSVER=1.1.7
 RUN apk add tzdata
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
@@ -32,10 +31,10 @@ RUN rm -rf /tmp/v2ray
 
 ENV PATH=$PATH:/usr/share/v2ray
 
-RUN wget https://github.com/semihalev/sdns/releases/download/v$DNSVER/sdns-$DNSVER_linux_arm64.tar.gz
-RUN tar -zxvf /sdns-$DNSVER_linux_arm64.tar.gz
-RUN mv /sdns-$DNSVER_linux_arm64/sdns /usr/bin/sdns
-RUN rm -r sdns-$DNSVER_linux_arm64.tar.gz
+RUN wget https://github.com/semihalev/sdns/releases/download/v1.1.7/sdns-1.1.7_linux_arm64.tar.gz
+RUN tar -zxvf /sdns-1.1.7_linux_arm64.tar.gz
+RUN mv /sdns-1.1.7_linux_arm64/sdns /usr/bin/sdns
+RUN rm -r sdns-1.1.7_linux_arm64.tar.gz
 
 
 RUN https://github.com/pymumu/smartdns/releases/download/Release33/smartdns-aarch64
