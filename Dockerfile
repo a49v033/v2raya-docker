@@ -31,12 +31,6 @@ RUN rm -rf /tmp/v2ray
 
 ENV PATH=$PATH:/usr/share/v2ray
 
-RUN wget https://github.com/semihalev/sdns/releases/download/v1.1.7/sdns-1.1.7_linux_arm64.tar.gz
-RUN tar -zxvf /sdns-1.1.7_linux_arm64.tar.gz
-RUN mv /sdns-1.1.7_linux_arm64/sdns /usr/bin/sdns
-RUN rm -r sdns-1.1.7_linux_arm64.tar.gz
-
-
 RUN wget https://github.com/pymumu/smartdns/releases/download/Release33/smartdns-aarch64
 RUN chmod +x /smartdns-aarch64
 RUN mv /smartdns-aarch64 /usr/bin/smartdns
