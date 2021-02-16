@@ -25,9 +25,7 @@ RUN chmod +x /tmp/v2ray/xray
 RUN mv /tmp/v2ray/xray /usr/share/v2ray/v2ray
 #RUN unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 #RUN chmod +x /tmp/v2ray/v2ray
-#RUN chmod +x /tmp/v2ray/v2ctl
 #RUN mv /tmp/v2ray/v2ray /usr/share/v2ray/v2ray
-#RUN mv /tmp/v2ray/v2ctl /usr/share/v2ray/v2ctl
 RUN wget -O /usr/local/share/v2ray/LoyalsoldierSite.dat https://raw.githubusercontent.com/mzz2017/dist-v2ray-rules-dat/master/geosite.dat
 RUN mv /tmp/v2ray/geoip.dat /usr/local/share/v2ray/geoip.dat
 RUN mv /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat
