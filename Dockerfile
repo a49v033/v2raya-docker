@@ -22,7 +22,7 @@ RUN mkdir /tmp/v2ray
 RUN curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
 RUN unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 RUN chmod +x /tmp/v2ray/xray
-RUN mv /tmp/v2ray/xray /usr/share/v2ray/xray
+RUN mv /tmp/v2ray/xray /usr/share/v2ray/v2ray
 #RUN unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 #RUN chmod +x /tmp/v2ray/v2ray
 #RUN chmod +x /tmp/v2ray/v2ctl
