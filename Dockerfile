@@ -19,7 +19,7 @@ RUN mkdir -p /usr/local/share/v2ray && touch /usr/local/share/v2ray/.copykeep
 
 RUN mkdir /tmp/v2ray
 #RUN curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-arm64-v8a.zip
-RUN curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-64.zip
+RUN curl -L -H "Cache-Control: no-cache" -o /tmp/v2ray/v2ray.zip https://github.com/XTLS/Xray-core/releases/latest/download/Xray-linux-arm64-v8a.zip
 RUN unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 RUN chmod +x /tmp/v2ray/xray
 RUN mv /tmp/v2ray/xray /usr/share/v2ray/v2ray
