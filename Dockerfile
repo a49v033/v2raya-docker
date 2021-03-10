@@ -29,10 +29,6 @@ RUN rm -rf /tmp/v2ray
 
 ENV PATH=$PATH:/usr/share/v2ray
 
-RUN wget https://github.com/pymumu/smartdns/releases/download/Release33/smartdns-aarch64
-RUN chmod +x /smartdns-aarch64
-RUN mv /smartdns-aarch64 /usr/bin/smartdns
-
 RUN wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_linux_arm64_$VER
 RUN chmod +x /v2raya_linux_arm64_$VER
 RUN mv /v2raya_linux_arm64_$VER /usr/bin/v2raya
