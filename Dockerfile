@@ -1,4 +1,5 @@
 FROM alpine
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk update
 RUN apk upgrade
 RUN apk add --no-cache --virtual .build-deps ca-certificates curl wget iptables bash-completion bash unzip
