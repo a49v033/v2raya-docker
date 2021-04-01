@@ -39,4 +39,3 @@ ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
 EXPOSE 53 2017 8080 20170 20171 20172
-#ENTRYPOINT ["v2raya","--mode=universal", "--webdir=/etc/v2raya-web"]
