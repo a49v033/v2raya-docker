@@ -29,8 +29,8 @@ RUN cp /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat
 
 ENV PATH=$PATH:/usr/share/v2ray
 
-RUN if [ $(arch) == aarch64 ]; then     linux=linux_arm64_$VER;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux;     chmod +x /v2raya_$linux;     mv /v2raya_$linux /usr/bin/v2ray; fi
-RUN if [ $(arch) == x86_64 ]; then     linux=linux_amd64_$VER;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux;     chmod +x /v2raya_$linux;     mv /v2raya_$linux /usr/bin/v2ray; fi
+RUN if [ $(arch) == aarch64 ]; then     linux=linux_arm64_$VER;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux;     chmod +x /v2raya_$linux;     mv /v2raya_$linux /usr/bin/v2raya; fi
+RUN if [ $(arch) == x86_64 ]; then     linux=linux_amd64_$VER;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux;     chmod +x /v2raya_$linux;     mv /v2raya_$linux /usr/bin/v2raya; fi
 VOLUME /etc/v2raya
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
