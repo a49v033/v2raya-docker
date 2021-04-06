@@ -30,7 +30,6 @@ RUN cp /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat
 
 ENV PATH=$PATH:/usr/share/v2ray
 
-
 RUN if [ $(arch) == aarch64 ]; then     linux=llinux_arm64;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux_$VER;     chmod +x /v2raya_$linux_$VER;     mv /v2raya_$linux__$VER /usr/bin/v2raya; fi
 RUN if [ $(arch) == x86_64 ]; then     linux=linux_amd64;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux_$VER;     chmod +x /v2raya_$linux_$VER;     mv /v2raya_$linux__$VER /usr/bin/v2raya; fi
 VOLUME /etc/v2raya
