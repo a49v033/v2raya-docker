@@ -22,4 +22,4 @@ jobs:
         docker buildx ls
     - name: docker v2raya-armv8
       run: |
-        docker buildx build -t ${{ secrets.DOCKER_USERNAME }}/v2raya --platform linux/arm64 . --push
+        docker buildx build -t ${{ secrets.DOCKER_USERNAME }}/v2raya --platform linux/arm64,linux/amd64 . --push
