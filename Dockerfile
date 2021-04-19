@@ -2,7 +2,7 @@ FROM alpine
 RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 RUN apk update && apk upgrade
 RUN apk add --no-cache --virtual .build-deps ca-certificates tzdata curl wget iptables bash-completion bash unzip
-ENV VER=v1.2.2
+ENV VER=v1.3.1
 RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo "Asia/Shanghai" > /etc/timezone
 
