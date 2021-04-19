@@ -6,4 +6,6 @@ if [ ! -e '/usr/local/share/v2ray/LoyalsoldierSite.dat' ]; then
     rm -rf /tmp/v2ray
     echo "拷贝geoip文件"
 fi
+echo 3 > /proc/sys/net/ipv4/tcp_fastopen
+echo "开启tcp_fastopen"
 v2raya --mode=universal --webdir=/etc/v2raya-web
