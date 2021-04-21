@@ -8,5 +8,5 @@ if [ ! -e '/usr/local/share/v2ray/LoyalsoldierSite.dat' ]; then
 fi
 echo 3 > /proc/sys/net/ipv4/tcp_fastopen
 echo "开启tcp_fastopen"
-smartdns -c /etc/v2raya/smartdns.conf
+##smartdns -c /etc/v2raya/smartdns.conf
 v2raya --mode=universal --webdir=/etc/v2raya-web
