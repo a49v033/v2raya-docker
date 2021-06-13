@@ -8,10 +8,10 @@ RUN echo "Asia/Shanghai" > /etc/timezone
 
 RUN mkdir /etc/v2raya
 RUN mkdir /etc/v2raya-web
-RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/favicon.ico
-RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/index.html
-RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/CNAME
-RUN wget -P /etc/v2raya-web https://raw.githubusercontent.com/v2rayA/v2rayA/master/gui/public/robots.txt
+RUN wget -P /etc/v2raya-web https://raw.fastgit.org/v2rayA/v2rayA/master/gui/public/favicon.ico
+RUN wget -P /etc/v2raya-web https://raw.fastgit.org/v2rayA/v2rayA/master/gui/public/index.html
+RUN wget -P /etc/v2raya-web https://raw.fastgit.org/v2rayA/v2rayA/master/gui/public/CNAME
+RUN wget -P /etc/v2raya-web https://raw.fastgit.org/v2rayA/v2rayA/master/gui/public/robots.txt
 RUN mkdir /usr/share/v2ray
 RUN mkdir -p /usr/local/share/v2ray && touch /usr/local/share/v2ray/.copykeep
 
@@ -21,7 +21,7 @@ RUN if [ $(arch) == x86_64 ]; then     curl -L -H "Cache-Control: no-cache" -o /
 RUN unzip /tmp/v2ray/v2ray.zip -d /tmp/v2ray
 RUN chmod +x /tmp/v2ray/v2ray
 RUN mv /tmp/v2ray/v2ray /usr/share/v2ray/v2ray
-RUN wget -O /tmp/v2ray/LoyalsoldierSite.dat https://raw.githubusercontent.com/mzz2017/dist-v2ray-rules-dat/master/geosite.dat
+RUN wget -O /tmp/v2ray/LoyalsoldierSite.dat https://raw.fastgit.org/mzz2017/dist-v2ray-rules-dat/master/geosite.dat
 RUN cp /tmp/v2ray/LoyalsoldierSite.dat /usr/local/share/v2ray/LoyalsoldierSite.dat
 RUN cp /tmp/v2ray/geoip.dat /usr/local/share/v2ray/geoip.dat
 RUN cp /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat
