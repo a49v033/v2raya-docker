@@ -1,7 +1,7 @@
 FROM alpine
 ENV VER=v1.3.3
 RUN set -ex \
-        && apk update && apk upgrade
+        && apk update -f && apk upgrade \
         && apk add --no-cache --virtual .build-deps ca-certificates tzdata curl wget iptables ip6tables bash unzip \
         && cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
         && echo "Asia/Shanghai" > /etc/timezone \
