@@ -6,5 +6,4 @@ if [ ! -e '/usr/local/share/v2ray/LoyalsoldierSite.dat' ]; then
     rm -rf /tmp/v2ray
     echo "拷贝geoip文件"
 fi
-##smartdns -c /etc/v2raya/smartdns.conf
 v2raya --mode=universal --webdir=/etc/v2raya-web
