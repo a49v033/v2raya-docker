@@ -26,8 +26,6 @@ RUN set -ex \
         && cp /tmp/v2ray/geosite.dat /usr/local/share/v2ray/geosite.dat \
         && if [ $(arch) == aarch64 ]; then     linux=linux_arm64_$VER;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux;     chmod +x /v2raya_$linux;     mv /v2raya_$linux /usr/bin/v2raya; fi \
         && if [ $(arch) == x86_64 ]; then     linux=linux_x64_$VER;     wget https://github.com/v2rayA/v2rayA/releases/download/$VER/v2raya_$linux;     chmod +x /v2raya_$linux;     mv /v2raya_$linux /usr/bin/v2raya; fi \
-        && if [ $(arch) == aarch64 ]; then     down=smartdns-aarch64;     wget https://github.com/pymumu/smartdns/releases/download/Release33/$down;     chmod +x /$down;     mv /$down /usr/bin/smartdns; fi  \
-        && if [ $(arch) == x86_64 ]; then     down=smartdns-x86_64;     wget https://github.com/pymumu/smartdns/releases/download/Release33/$down;     chmod +x /$down;     mv /$down /usr/bin/smartdns; fi \
         && rm -rf /var/cache/apk/*
 VOLUME /etc/v2raya
 ADD entrypoint.sh /entrypoint.sh
